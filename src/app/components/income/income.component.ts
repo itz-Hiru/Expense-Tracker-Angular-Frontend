@@ -13,6 +13,8 @@ import { error } from 'console';
 })
 export class IncomeComponent {
 
+  incomes: any;
+
   incomeForm!: FormGroup;
 
   listOfCategory: any[] = [
@@ -34,6 +36,7 @@ export class IncomeComponent {
   ) {}
 
   ngOnInit() {
+    this.getAllIncomes();
     this.incomeForm = this.fb.group({
       title: [null, Validators.required],
       amount: [null, Validators.required],
@@ -53,10 +56,19 @@ export class IncomeComponent {
       res => {
         this.messageService.success("Income added successfully", { nzDuration: 5000 });
         this.incomeForm.reset();
+        this.getAllIncomes();
       },
       error => {
         this.messageService.error("Error while adding income", { nzDuration: 5000 });
       }
     );
+  }
+
+  getAllIncomes() {
+    this.incomeService.getAllIncomes().subscribe(
+      res => {
+        this.incomes = res;
+      }
+    )
   }
 }
