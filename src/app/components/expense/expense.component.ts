@@ -45,6 +45,7 @@ export class ExpenseComponent {
   submitForm() {
     this.expenseService.postExpense(this.expenseForm.value).subscribe(res => {
       this.messageService.success("Expense added successfully", { nzDuration: 5000 });
+      this.getAllExpenses();
     }, error => {
       this.messageService.error("Error while posting expense", { nzDuration: 5000 });
     })  
@@ -53,6 +54,15 @@ export class ExpenseComponent {
   getAllExpenses() {
     this.expenseService.getAllExpenses().subscribe(res => {
       this.expenses = res;
+    })
+  }
+
+  deleteExpense(id: number) {
+    this.expenseService.deleteExpense(id).subscribe(res => {
+      this.messageService.success("Expense deleted successfully", { nzDuration: 5000 });
+      this.getAllExpenses();
+    }, error => {
+      this.messageService.error("Error while deleting expense", { nzDuration: 5000 });
     })
   }
 }
