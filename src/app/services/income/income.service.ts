@@ -23,4 +23,8 @@ export class IncomeService {
   getIncomeById(id: number): Observable<any> {
     return this.http.get(BASIC_URL + `income/${id}`);
   }
+
+  updateIncome(id: number, incomeDTO: any): Observable<any> {
+    return this.http.put(BASIC_URL + `income/${id}`, incomeDTO);
+  }
 }

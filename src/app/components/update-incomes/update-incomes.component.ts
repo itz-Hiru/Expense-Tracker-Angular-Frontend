@@ -46,7 +46,7 @@ export class UpdateIncomesComponent {
       category: [null, Validators.required],
       description: [null, Validators.required]
     });
-    
+
     this.getIncomeById();
   }
 
@@ -62,6 +62,14 @@ export class UpdateIncomesComponent {
   }
 
   submitForm() {
-    
+    this.incomeService.updateIncome(this.id, this.incomeForm.value).subscribe(
+      res => {
+        this.messageService.success("Income updated successfully", { nzDuration: 5000 });
+        this.router.navigateByUrl("/income")
+      },
+      error => {
+        this.messageService.error("Error while updating income" , { nzDuration: 5000 });
+      }
+    );
   }
 }
