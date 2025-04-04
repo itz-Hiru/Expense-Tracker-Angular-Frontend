@@ -36,13 +36,13 @@ registerLocaleData(en);
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    DemoNgZorroAntdModule
+    DemoNgZorroAntdModule,
   ],
   providers: [
     provideClientHydration(withEventReplay()),
     provideNzI18n(en_US),
     provideAnimationsAsync(),
-    provideHttpClient()
+    provideHttpClient(),
   ],
   bootstrap: [AppComponent]
 })

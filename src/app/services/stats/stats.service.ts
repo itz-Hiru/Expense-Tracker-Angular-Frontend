@@ -17,4 +17,8 @@ export class StatsService {
   getStats(): Observable<any> {
     return this.http.get(BASIC_URL + "stats");
   }
+
+  getChart(): Observable<any> {
+    return this.http.get(BASIC_URL + "stats/chart");
+  }
 }
