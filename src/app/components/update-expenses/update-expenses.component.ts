@@ -26,7 +26,7 @@ export class UpdateExpensesComponent {
   ];
 
   expenses: any;
-  id!: number;  // Declare without initializing
+  id!: number;
 
   constructor(
     private fb: FormBuilder,

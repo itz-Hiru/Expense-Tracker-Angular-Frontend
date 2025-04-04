@@ -17,6 +17,10 @@ export class IncomeService {
   }
 
   getAllIncomes(): Observable<any> {
-      return this.http.get(BASIC_URL + "income/all");
-    }
+    return this.http.get(BASIC_URL + "income/all");
+  }
+
+  getIncomeById(id: number): Observable<any> {
+    return this.http.get(BASIC_URL + `income/${id}`);
+  }
 }
