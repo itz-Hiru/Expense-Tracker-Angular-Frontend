@@ -14,4 +14,8 @@ export class ExpenseService {
   postExpense(expenseDTO: any): Observable<any> {
     return this.http.post(BASIC_URL + "expense", expenseDTO);
   }
+
+  getAllExpenses(): Observable<any> {
+    return this.http.get(BASIC_URL + "expense/all");
+  }
 }
