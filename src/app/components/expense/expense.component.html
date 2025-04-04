@@ -21,13 +21,14 @@
                     <nz-form-item>
                         <nz-form-control nzErrorTip="Please input description!">
                             <textarea nz-input placeholder="Enter description" [nzAutosize]="{ minRows: 2, maxRows: 6}"
-                            formControlName="description"></textarea>
+                                formControlName="description"></textarea>
                         </nz-form-control>
                     </nz-form-item>
                     <nz-form-item>
                         <nz-form-control nzErrorTip="Please input title">
                             <nz-select nzAllowClear nzPlaceHolder="Select the category" formControlName="category">
-                                <nz-option *ngFor="let category of listOfCategory" [nzLabel]="category" [nzValue]="category"></nz-option>
+                                <nz-option *ngFor="let category of listOfCategory" [nzLabel]="category"
+                                    [nzValue]="category"></nz-option>
                             </nz-select>
                         </nz-form-control>
                     </nz-form-item>
@@ -57,9 +58,9 @@
                         </div>
                         <div nz-col nzSpan="6" style="font-size: 15px;">
                             <span nz-icon nzType="edit" nzTheme="fill" style="color: blue;"
-                            (click)="updateExpense(expense.id)"></span>
-                            <span nz-icon nzType="delete" nzTheme="fill" style="color: red; margin-left: 10px;" 
-                            (click)="deleteExpense(expense.id)"></span>
+                                (click)="updateExpense(expense.id)"></span>
+                            <span nz-icon nzType="delete" nzTheme="fill" style="color: red; margin-left: 10px;"
+                                (click)="deleteExpense(expense.id)"></span>
                         </div>
                     </div>
                 </div>

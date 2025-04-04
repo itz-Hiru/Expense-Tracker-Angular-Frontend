@@ -143,6 +143,7 @@ import { NzSegmentedModule } from "ng-zorro-antd/segmented";
         NzSegmentedModule,
     ]
 })
+
 export class DemoNgZorroAntdModule {
 
 }

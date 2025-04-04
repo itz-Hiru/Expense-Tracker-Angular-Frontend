@@ -20,18 +20,20 @@
                     </nz-form-item>
                     <nz-form-item>
                         <nz-form-control nzErrorTip="Please add description!">
-                            <textarea nz-input placeholder="Enter description" [nzAutosize]="{ minRows: 2, maxRows: 6}" 
-                            formControlName="description"></textarea>
+                            <textarea nz-input placeholder="Enter description" [nzAutosize]="{ minRows: 2, maxRows: 6}"
+                                formControlName="description"></textarea>
                         </nz-form-control>
                     </nz-form-item>
                     <nz-form-item>
                         <nz-form-control nzErrorTip="Please select category!">
                             <nz-select nzAllowClear nzPlaceHolder="Select the category" formControlName="category">
-                                <nz-option *ngFor="let category of listOfCategory" [nzLabel]="category" [nzValue]="category"></nz-option>
+                                <nz-option *ngFor="let category of listOfCategory" [nzLabel]="category"
+                                    [nzValue]="category"></nz-option>
                             </nz-select>
                         </nz-form-control>
                     </nz-form-item>
-                    <button nz-button nzType="primary" nzBlock [disabled]="incomeForm.invalid" class="w-100">Add new income</button>
+                    <button nz-button nzType="primary" nzBlock [disabled]="incomeForm.invalid" class="w-100">Add new
+                        income</button>
                 </form>
             </nz-card>
         </div>
@@ -40,21 +42,23 @@
                 <div nz-card-grid style="width: 100%;" *ngFor="let income of incomes">
                     <div nz-row>
                         <div nz-col nzSpan="18">
-                            <span nz-icon nzType="message" nzTheme="outline"></span> 
+                            <span nz-icon nzType="message" nzTheme="outline"></span>
                             {{income.title}}
                             -
-                            <span nz-icon nzType="dollar" nzTheme="outline"></span> 
+                            <span nz-icon nzType="dollar" nzTheme="outline"></span>
                             {{income.amount}}
                             -
-                            <span nz-icon nzType="clock-circle" nzTheme="outline"></span> 
+                            <span nz-icon nzType="clock-circle" nzTheme="outline"></span>
                             {{income.date}}
                             -
-                            <span nz-icon nzType="comment" nzTheme="outline"></span> 
+                            <span nz-icon nzType="comment" nzTheme="outline"></span>
                             {{income.category}}
                         </div>
                         <div nz-col nzSpan="6" style="font-size: 15px;">
-                            <span nz-icon nzType="edit" nzTheme="fill" style="color: blue;" routerLink="/income/{{income.id}}/edit"></span>
-                            <span nz-icon nzType="delete" nzTheme="fill" style="color: red; margin-left: 10px;" (click)="deleteIncome(income.id)"></span>
+                            <span nz-icon nzType="edit" nzTheme="fill" style="color: blue;"
+                                routerLink="/income/{{income.id}}/edit"></span>
+                            <span nz-icon nzType="delete" nzTheme="fill" style="color: red; margin-left: 10px;"
+                                (click)="deleteIncome(income.id)"></span>
                         </div>
                     </div>
                 </div>

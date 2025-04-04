@@ -3,7 +3,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { IncomeService } from '../../services/income/income.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { error } from 'console';
 
 @Component({
   selector: 'app-update-incomes',
@@ -29,12 +28,12 @@ export class UpdateIncomesComponent {
   ];
 
   constructor(
-    private fb:FormBuilder,
+    private fb: FormBuilder,
     private messageService: NzMessageService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private incomeService: IncomeService,
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.params['id'];
@@ -58,7 +57,7 @@ export class UpdateIncomesComponent {
       error => {
         this.messageService.error("Something went wrong", { nzDuration: 5000 })
       }
-    )
+    );
   }
 
   submitForm() {
@@ -68,7 +67,7 @@ export class UpdateIncomesComponent {
         this.router.navigateByUrl("/income")
       },
       error => {
-        this.messageService.error("Error while updating income" , { nzDuration: 5000 });
+        this.messageService.error("Error while updating income", { nzDuration: 5000 });
       }
     );
   }

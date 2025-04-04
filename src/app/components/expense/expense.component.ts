@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ExpenseService } from '../../services/expense/expense.service';
 import { NzMessageService } from 'ng-zorro-antd/message';
-import { error } from 'console';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,9 +10,11 @@ import { Router } from '@angular/router';
   templateUrl: './expense.component.html',
   styleUrl: './expense.component.scss'
 })
+
 export class ExpenseComponent {
 
   expenseForm!: FormGroup;
+
   listOfCategory: any[] = [
     "Education",
     "Groceries",
@@ -35,6 +36,7 @@ export class ExpenseComponent {
 
   ngOnInit() {
     this.getAllExpenses();
+
     this.expenseForm = this.fb.group({
       title: [null, Validators.required],
       amount: [null, Validators.required],
@@ -50,13 +52,16 @@ export class ExpenseComponent {
       return;
     }
 
-    this.expenseService.postExpense(this.expenseForm.value).subscribe(res => {
-      this.messageService.success("Expense added successfully", { nzDuration: 5000 });
-      this.expenseForm.reset();
-      this.getAllExpenses();
-    }, error => {
-      this.messageService.error("Error while posting expense", { nzDuration: 5000 });
-    })  
+    this.expenseService.postExpense(this.expenseForm.value).subscribe(
+      res => {
+        this.messageService.success("Expense added successfully", { nzDuration: 5000 });
+        this.expenseForm.reset();
+        this.getAllExpenses();
+      },
+      error => {
+        this.messageService.error("Error while posting expense", { nzDuration: 5000 });
+      }
+    )
   }
 
   getAllExpenses() {
@@ -70,11 +75,14 @@ export class ExpenseComponent {
   }
 
   deleteExpense(id: number) {
-    this.expenseService.deleteExpense(id).subscribe(res => {
-      this.messageService.success("Expense deleted successfully", { nzDuration: 5000 });
-      this.getAllExpenses();
-    }, error => {
-      this.messageService.error("Error while deleting expense", { nzDuration: 5000 });
-    })
+    this.expenseService.deleteExpense(id).subscribe(
+      res => {
+        this.messageService.success("Expense deleted successfully", { nzDuration: 5000 });
+        this.getAllExpenses();
+      },
+      error => {
+        this.messageService.error("Error while deleting expense", { nzDuration: 5000 });
+      }
+    )
   }
 }
