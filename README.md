@@ -1,59 +1,65 @@
-# ExpenseTrackerAngularFrontend
+# 💰 Personal Finance Tracker - Frontend 🚀
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![NG-ZORRO](https://img.shields.io/badge/NG-ZORRO-41B883?style=for-the-badge&logo=ng-zorro&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-F5A623?style=for-the-badge&logo=chart.js&logoColor=white)
 
-## Development server
+> A modern and intuitive frontend for tracking personal finances 💸, featuring interactive charts and data visualization with Chart.js 🎨.
 
-To start a local development server, run:
+🎯 **Features**
+- ✅ Real-time dashboard for income and expense tracking
+- 📊 Interactive financial charts using **Chart.js**
+- 🎨 Styled with **SCSS** and responsive design
+- 💡 Built with **NG-ZORRO** UI components for better user experience
+
+---
+
+## 🚀 Quick Start
 
 ```bash
+# Clone the repository
+git clone https://github.com/itz-Hiru/Expense-Tracker-Angular-Frontend.git
+cd Expense-Tracker-Angular-Frontend
+
+# Install dependencies
+npm install
+
+# Run the application
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+⚡ **Runs on:** `http://localhost:4200`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Tech Stack
+- **Angular 13+** 🅰️
+- **TypeScript** 💻
+- **SCSS** 🌸
+- **NG-ZORRO** 🛠️
+- **Chart.js** 📊
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🏗️ Development Guidelines
 
-```bash
-ng generate --help
-```
+1. 🍴 Fork the repository
+2. 🌿 Create a new branch for features/fixes
+3. 💻 Make your changes and test thoroughly
+4. 🔥 Submit a pull request for review
 
-## Building
+---
 
-To build the project run:
+## 📞 Contact
+📧 Email: hirumithakuladewanew@gmail.com  
+🌐 GitHub: [itz-Hiru](https://github.com/itz-Hiru)
 
-```bash
-ng build
-```
+Give a ⭐ if you like this project! 🎉
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## License
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project Licend with MIT LICENSE
