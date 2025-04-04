@@ -14,6 +14,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { DemoNgZorroAntdModule } from './DemoNgZorroAntdModule';
 import { ExpenseComponent } from './components/expense/expense.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { UpdateExpensesComponent } from './components/update-expenses/update-expenses.component';
 
 registerLocaleData(en);
 
@@ -21,7 +22,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     ExpenseComponent,
-    DashboardComponent
+    DashboardComponent,
+    UpdateExpensesComponent
   ],
   imports: [
     BrowserModule,

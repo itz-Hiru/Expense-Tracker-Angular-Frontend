@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ExpenseComponent } from './components/expense/expense.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { UpdateExpensesComponent } from './components/update-expenses/update-expenses.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: "expense",
     component: ExpenseComponent
+  },
+  {
+    path: "expense/:id/edit",
+    component: UpdateExpensesComponent
   }
 ];
 

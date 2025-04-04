@@ -19,6 +19,14 @@ export class ExpenseService {
     return this.http.get(BASIC_URL + "expense/all");
   }
 
+  getExpenseById(id: number): Observable<any> {
+    return this.http.get(BASIC_URL + `expense/${id}`);
+  }
+
+  updateExpense(id: number, expenseDTO: any): Observable<any> {
+    return this.http.put(BASIC_URL + `expense/${id}`, expenseDTO);
+  }
+
   deleteExpense(id: number): Observable<any> {
     return this.http.delete(BASIC_URL + `expense/${id}`);
   }

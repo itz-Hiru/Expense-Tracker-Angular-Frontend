@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ExpenseService } from '../../services/expense/expense.service';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { error } from 'console';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-expense',
@@ -29,6 +30,7 @@ export class ExpenseComponent {
   constructor(private fb: FormBuilder,
     private expenseService: ExpenseService,
     private messageService: NzMessageService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -55,6 +57,10 @@ export class ExpenseComponent {
     this.expenseService.getAllExpenses().subscribe(res => {
       this.expenses = res;
     })
+  }
+
+  updateExpense(id: number) {
+    this.router.navigateByUrl(`/expense/${id}/edit`);
   }
 
   deleteExpense(id: number) {
