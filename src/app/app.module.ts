@@ -15,6 +15,7 @@ import { DemoNgZorroAntdModule } from './DemoNgZorroAntdModule';
 import { ExpenseComponent } from './components/expense/expense.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UpdateExpensesComponent } from './components/update-expenses/update-expenses.component';
+import { IncomeComponent } from './components/income/income.component';
 
 registerLocaleData(en);
 
@@ -23,7 +24,8 @@ registerLocaleData(en);
     AppComponent,
     ExpenseComponent,
     DashboardComponent,
-    UpdateExpensesComponent
+    UpdateExpensesComponent,
+    IncomeComponent
   ],
   imports: [
     BrowserModule,

@@ -45,8 +45,14 @@ export class ExpenseComponent {
   }
 
   submitForm() {
+    if (this.expenseForm.invalid) {
+      this.messageService.warning("Please fill in all required fields", { nzDuration: 5000 });
+      return;
+    }
+
     this.expenseService.postExpense(this.expenseForm.value).subscribe(res => {
       this.messageService.success("Expense added successfully", { nzDuration: 5000 });
+      this.expenseForm.reset();
       this.getAllExpenses();
     }, error => {
       this.messageService.error("Error while posting expense", { nzDuration: 5000 });
