@@ -8,22 +8,26 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
 import { DemoNgZorroAntdModule } from './DemoNgZorroAntdModule';
 import { ExpenseComponent } from './components/expense/expense.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExpenseComponent
+    ExpenseComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     DemoNgZorroAntdModule
   ],
   providers: [
