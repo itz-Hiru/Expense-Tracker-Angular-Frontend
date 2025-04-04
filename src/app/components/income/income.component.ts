@@ -71,4 +71,16 @@ export class IncomeComponent {
       }
     )
   }
+
+  deleteIncome(id: number) {
+    this.incomeService.deleteIncome(id).subscribe(
+      res => {
+        this.messageService.success("Income deleted successfully", { nzDuration: 5000 });
+        this.getAllIncomes();
+      },
+      error => {
+        this.messageService.error("Error while deleting income", { nzDuration: 5000 });
+      }
+    )
+  }
 }

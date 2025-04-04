@@ -27,4 +27,8 @@ export class IncomeService {
   updateIncome(id: number, incomeDTO: any): Observable<any> {
     return this.http.put(BASIC_URL + `income/${id}`, incomeDTO);
   }
+
+  deleteIncome(id: number): Observable<any> {
+    return this.http.delete(BASIC_URL + `income/${id}`);
+  }
 }

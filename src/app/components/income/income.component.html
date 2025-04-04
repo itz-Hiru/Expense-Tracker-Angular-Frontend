@@ -54,7 +54,7 @@
                         </div>
                         <div nz-col nzSpan="6" style="font-size: 15px;">
                             <span nz-icon nzType="edit" nzTheme="fill" style="color: blue;" routerLink="/income/{{income.id}}/edit"></span>
-                            <span nz-icon nzType="delete" nzTheme="fill" style="color: red;"></span>
+                            <span nz-icon nzType="delete" nzTheme="fill" style="color: red; margin-left: 10px;" (click)="deleteIncome(income.id)"></span>
                         </div>
                     </div>
                 </div>
